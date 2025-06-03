@@ -351,25 +351,18 @@ function playSelectedCards() {
     gameState.selectedCards = [];
 
     // カード効果実行
-    let shouldEndTurn = false;
     cardsToPlay.forEach(card => {
         if (card && card.name) {
             executeCard(card, 'player');
-            // 特殊カード以外はターン終了
-            if (!card.isSpecial) {
-                shouldEndTurn = true;
-            }
         }
     });
 
     updateUI();
     
-    // 特殊カード以外を使った場合はターン終了
-    if (shouldEndTurn) {
-        setTimeout(() => {
-            endTurn();
-        }, 1000);
-    }
+    // 1枚カードを出したら必ずターン終了
+    setTimeout(() => {
+        endTurn();
+    }, 1000);
 }
 
 // カード効果実行
