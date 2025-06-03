@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Conquest（ソロ版）</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="status-bar ai-status">
+            <div>
+                <h3>🤖 AI</h3>
+                <div class="hp-container">
+                    <span>HP:</span>
+                    <div class="hp-bar">
+                        <div class="hp-fill" id="ai-hp-fill"></div>
+                    </div>
+                    <span id="ai-hp-text">100/100</span>
+                </div>
+                <div class="security-container">
+                    <span>🛡️</span>
+                    <div class="security-level" id="ai-security">0</div>
+                </div>
+            </div>
+            <div id="ai-hand-count">手札: 5枚</div>
+        </div>
+
+        <div class="battlefield">
+            <div class="world-security" id="world-security">🌐 世界セキュリティ要求レベル: 1</div>
+            <div class="turn-indicator" id="turn-indicator">あなたのターン</div>
+            <div class="effects-display" id="effects-display"></div>
+        </div>
+
+        <div class="status-bar player-status">
+            <div>
+                <h3>👤 プレイヤー</h3>
+                <div class="hp-container">
+                    <span>HP:</span>
+                    <div class="hp-bar">
+                        <div class="hp-fill" id="player-hp-fill"></div>
+                    </div>
+                    <span id="player-hp-text">100/100</span>
+                </div>
+                <div class="security-container">
+                    <span>🛡️</span>
+                    <div class="security-level" id="player-security">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hand">
+            <div class="hand-title">手札 <span id="selected-count">(0枚選択中)</span></div>
+            <div class="cards-container" id="player-hand"></div>
+        </div>
+
+        <div class="controls">
+            <button class="btn" id="play-cards-btn" disabled>カードを出す</button>
+            <button class="btn" id="end-turn-btn">ターン終了</button>
+            <button class="btn" id="card-guide-btn">カード一覧</button>
+            <button class="btn danger" id="new-game-btn">新しいゲーム</button>
+        </div>
+
+        <div class="log">
+            <div id="game-log"></div>
+        </div>
+    </div>
+
+    <!-- カードガイドモーダル -->
+    <div class="card-guide" id="card-guide">
+        <div class="card-guide-content">
+            <button class="close-guide-btn" onclick="closeCardGuide()">×</button>
+            <h2>📚 カード一覧解説</h2>
+            <div class="card-guide-grid" id="card-guide-grid"></div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

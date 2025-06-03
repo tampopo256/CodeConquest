@@ -1,0 +1,94 @@
+{
+    "cards": [
+      {
+        "id": 1,
+        "name": "IF文",
+        "type": "条件",
+        "effect": "次の攻撃カードのダメージが2倍になる",
+        "action": "condition",
+        "value": "double_damage",
+        "isSpecial": true,
+        "description": "条件分岐の基本。プログラムの流れを制御する重要な構文。"
+      },
+      {
+        "id": 2,
+        "name": "FORループ",
+        "type": "攻撃",
+        "effect": "1～3回ランダムに攻撃（1回あたり8ダメージ）",
+        "action": "attack",
+        "value": "random_multi",
+        "isSpecial": false,
+        "description": "繰り返し処理の代表格。決まった回数だけ処理を実行する。"
+      },
+      {
+        "id": 16,
+        "name": "情報漏洩",
+        "type": "妨害",
+        "effect": "相手の手札を1枚見て選んで破棄、さらに5ダメージ",
+        "action": "leak",
+        "value": 5,
+        "isSpecial": true,
+        "description": "セキュリティ意識の低下は大損害に。意図的または過失による情報流出を模擬。"
+      },
+      {
+        "id": 17,
+        "name": "フィッシング詐欺",
+        "type": "妨害",
+        "effect": "相手の次のターン、ドローできなくなる（メールに騙された！）",
+        "action": "phishing",
+        "value": null,
+        "isSpecial": false,
+        "description": "大学でも多発。信頼を装った偽メールに注意。"
+      },
+      {
+        "id": 18,
+        "name": "デジタルデトックス",
+        "type": "回復",
+        "effect": "HP10回復 + 状態異常を1つ解除",
+        "action": "detox",
+        "value": 10,
+        "isSpecial": true,
+        "description": "スマホ依存から解放され、集中力回復！"
+      },
+      {
+        "id": 19,
+        "name": "ジェンダー配慮コード",
+        "type": "特殊",
+        "effect": "自分の次の「コンボ系」カードが無条件で成功",
+        "action": "inclusive_code",
+        "value": null,
+        "isSpecial": true,
+        "description": "多様性を考慮した設計は、全体の生産性を高める。"
+      },
+      {
+        "id": 20,
+        "name": "ディープフェイク対策",
+        "type": "防御",
+        "effect": "相手の特殊カード効果を1回無効化",
+        "action": "deepfake_block",
+        "value": 1,
+        "isSpecial": true,
+        "description": "現代社会で重要なフェイクコンテンツの識別能力。"
+      },
+      {
+        "id": 21,
+        "name": "ブラックボックステスト",
+        "type": "攻撃",
+        "effect": "相手のランダムな効果を封じる（効果不発）＋8ダメージ",
+        "action": "blackbox_test",
+        "value": 8,
+        "isSpecial": false,
+        "description": "内部構造を知らずに挙動を試験するソフトウェアテスト技法。"
+      },
+      {
+        "id": 22,
+        "name": "ゼロトラスト認証",
+        "type": "防御",
+        "effect": "次のターン中、すべての攻撃を1回だけ無効化",
+        "action": "zero_trust",
+        "value": 1,
+        "isSpecial": true,
+        "description": "誰も信用しないセキュリティ原則。大学Wi-Fiでも注目の仕組み。"
+      }
+    ]
+  }
